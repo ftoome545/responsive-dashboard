@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_dashboard/widgets/all_expanses_header.dart';
+import 'package:responsive_dashboard/widgets/all_expanses_item_listview.dart';
 
 class AllExpanses extends StatelessWidget {
   const AllExpanses({super.key});
@@ -11,9 +12,13 @@ class AllExpanses extends StatelessWidget {
           color: Colors.white,
           shape:
               RoundedRectangleBorder(borderRadius: BorderRadius.circular(12))),
-      child: Column(
+      child: const Column(
         children: [
           AllExpansesHeader(),
+          SizedBox(
+            height: 16,
+          ),
+          AllExpansesItemListview(),
         ],
       ),
     );
