@@ -20,6 +20,9 @@ class LatestTransaction extends StatelessWidget {
           height: 12,
         ),
         LatestTransactionListView(),
+        SizedBox(
+          height: 24,
+        )
       ],
     );
   }
