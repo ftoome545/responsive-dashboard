@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_dashboard/utils/app_styles.dart';
+import 'package:responsive_dashboard/widgets/transaction_history_header.dart';
+import 'package:responsive_dashboard/widgets/transaction_history_list_view.dart';
 
 class TransactionHistory extends StatelessWidget {
   const TransactionHistory({super.key});
@@ -10,7 +12,7 @@ class TransactionHistory extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         const Padding(
-          padding: EdgeInsets.only(top: 20, right: 24),
+          padding: EdgeInsets.only(right: 24),
           child: TransactionHistoryHeader(),
         ),
         Text(
@@ -18,32 +20,11 @@ class TransactionHistory extends StatelessWidget {
           style: AppStyles.styleMedium16.copyWith(
             color: const Color(0xffAAAAAA),
           ),
-        )
-      ],
-    );
-  }
-}
-
-class TransactionHistoryHeader extends StatelessWidget {
-  const TransactionHistoryHeader({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: [
-        const Text(
-          'Transaction History',
-          style: AppStyles.styleSemibold20,
         ),
-        Text(
-          'see all',
-          style: AppStyles.styleMedium16.copyWith(
-            color: const Color(0xff4EB7F2),
-          ),
+        const SizedBox(
+          height: 16,
         ),
+        const TransactionHistoryListView(),
       ],
     );
   }
