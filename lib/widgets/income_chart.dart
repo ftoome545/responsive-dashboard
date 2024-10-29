@@ -12,7 +12,7 @@ class _IncomeChartState extends State<IncomeChart> {
   int activeIndex = -1;
   @override
   Widget build(BuildContext context) {
-    return PieChart(getChartDatat());
+    return AspectRatio(aspectRatio: 1, child: PieChart(getChartDatat()));
   }
 
   PieChartData getChartDatat() {
