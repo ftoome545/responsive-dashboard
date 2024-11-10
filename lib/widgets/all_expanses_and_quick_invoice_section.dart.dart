@@ -12,9 +12,6 @@ class AllExpansesAndQuickInvoiceSection extends StatelessWidget {
     return const SingleChildScrollView(
       child: Column(
         children: [
-          SizedBox(
-            height: 40,
-          ),
           AllExpanses(),
           SizedBox(
             height: 24,
