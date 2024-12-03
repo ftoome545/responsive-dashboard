@@ -8,14 +8,14 @@ class AllExpansesHeader extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Row(
+    return Row(
       children: [
         Text(
           'All Expanses',
-          style: AppStyles.styleSemibold20,
+          style: AppStyles.styleSemibold20(context),
         ),
-        Expanded(child: SizedBox()),
-        RangeOptions()
+        const Expanded(child: SizedBox()),
+        const RangeOptions()
       ],
     );
   }

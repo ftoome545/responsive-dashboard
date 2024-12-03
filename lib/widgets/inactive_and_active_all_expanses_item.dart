@@ -30,21 +30,21 @@ class InActiveAllExpansesItem extends StatelessWidget {
           ),
           Text(
             itemModel.title,
-            style: AppStyles.styleMedium16,
+            style: AppStyles.styleMedium16(context),
           ),
           const SizedBox(
             height: 8,
           ),
           Text(
             itemModel.date,
-            style: AppStyles.styleRegular14,
+            style: AppStyles.styleRegular14(context),
           ),
           const SizedBox(
             height: 16,
           ),
           Text(
             itemModel.price,
-            style: AppStyles.styleSemibold24,
+            style: AppStyles.styleSemibold24(context),
           )
         ],
       ),
@@ -81,7 +81,7 @@ class ActiveAllExpansesItem extends StatelessWidget {
           ),
           Text(
             itemModel.title,
-            style: AppStyles.styleMedium16.copyWith(
+            style: AppStyles.styleMedium16(context).copyWith(
               color: Colors.white,
             ),
           ),
@@ -90,7 +90,7 @@ class ActiveAllExpansesItem extends StatelessWidget {
           ),
           Text(
             itemModel.date,
-            style: AppStyles.styleRegular14
+            style: AppStyles.styleRegular14(context)
                 .copyWith(color: const Color(0xFFFAFAFA)),
           ),
           const SizedBox(
@@ -98,7 +98,7 @@ class ActiveAllExpansesItem extends StatelessWidget {
           ),
           Text(
             itemModel.price,
-            style: AppStyles.styleSemibold24.copyWith(
+            style: AppStyles.styleSemibold24(context).copyWith(
               color: Colors.white,
             ),
           )
