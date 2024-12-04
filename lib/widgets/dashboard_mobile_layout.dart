@@ -17,11 +17,17 @@ class DashboardMobileLayout extends StatelessWidget {
           SizedBox(
             height: 24,
           ),
-          MyCardAndTransactionHistorySection(),
+          Padding(
+            padding: EdgeInsets.only(left: 24),
+            child: MyCardAndTransactionHistorySection(),
+          ),
           SizedBox(
             height: 24,
           ),
-          IncomeSection(),
+          Padding(
+            padding: EdgeInsets.only(left: 24),
+            child: IncomeSection(),
+          ),
         ],
       ),
     );

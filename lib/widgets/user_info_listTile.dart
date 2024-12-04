@@ -14,13 +14,21 @@ class UserInfoListtile extends StatelessWidget {
       elevation: 0,
       child: ListTile(
         leading: SvgPicture.asset(userInfoModel.image),
-        title: Text(
-          userInfoModel.title,
-          style: AppStyles.styleSemibold16(context),
+        title: FittedBox(
+          fit: BoxFit.scaleDown,
+          alignment: AlignmentDirectional.centerStart,
+          child: Text(
+            userInfoModel.title,
+            style: AppStyles.styleSemibold16(context),
+          ),
         ),
-        subtitle: Text(
-          userInfoModel.subTitle,
-          style: AppStyles.styleRegular12(context),
+        subtitle: FittedBox(
+          fit: BoxFit.scaleDown,
+          alignment: AlignmentDirectional.centerStart,
+          child: Text(
+            userInfoModel.subTitle,
+            style: AppStyles.styleRegular12(context),
+          ),
         ),
       ),
     );
