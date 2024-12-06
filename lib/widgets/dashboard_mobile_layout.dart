@@ -24,10 +24,7 @@ class DashboardMobileLayout extends StatelessWidget {
           SizedBox(
             height: 24,
           ),
-          Padding(
-            padding: EdgeInsets.only(left: 24),
-            child: IncomeSection(),
-          ),
+          IncomeSection(),
         ],
       ),
     );
