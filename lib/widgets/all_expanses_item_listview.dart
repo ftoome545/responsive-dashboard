@@ -35,29 +35,72 @@ class _AllExpansesItemListviewState extends State<AllExpansesItemListview> {
   @override
   Widget build(BuildContext context) {
     return Row(
-      /* With map((e)) you can not assecc the index of each item, but asMap can 
-      do that using entries it is like index and has key and value.*/
-      // children: items.map((e) => AllExpansesItem(itemModel: e)).toList();
-      children: items.asMap().entries.map((e) {
-        int index = e.key;
-        var item = e.value;
-
-        return Expanded(
+      children: [
+        Expanded(
           child: GestureDetector(
             onTap: () {
-              updateIndex(index);
+              updateIndex(0);
             },
-            child: Padding(
-              padding: EdgeInsets.symmetric(horizontal: index == 1 ? 12 : 0),
-              child: AllExpansesItem(
-                itemModel: item,
-                isSelected: selectedIndex == index,
-              ),
+            child: AllExpansesItem(
+              itemModel: items[0],
+              isSelected: selectedIndex == 0,
             ),
           ),
-        );
-      }).toList(),
+        ),
+        const SizedBox(
+          height: 8,
+        ),
+        Expanded(
+          child: GestureDetector(
+            onTap: () {
+              updateIndex(1);
+            },
+            child: AllExpansesItem(
+              itemModel: items[1],
+              isSelected: selectedIndex == 1,
+            ),
+          ),
+        ),
+        const SizedBox(
+          height: 8,
+        ),
+        Expanded(
+          child: GestureDetector(
+            onTap: () {
+              updateIndex(2);
+            },
+            child: AllExpansesItem(
+              itemModel: items[2],
+              isSelected: selectedIndex == 2,
+            ),
+          ),
+        )
+      ],
     );
+    // return Row(
+    //   /* With map((e)) you can not assecc the index of each item, but asMap can
+    //   do that using entries it is like index and has key and value.*/
+    //   // children: items.map((e) => AllExpansesItem(itemModel: e)).toList();
+    //   children: items.asMap().entries.map((e) {
+    //     int index = e.key;
+    //     var item = e.value;
+
+    //     return Expanded(
+    //       child: GestureDetector(
+    //         onTap: () {
+    //           updateIndex(index);
+    //         },
+    //         child: Padding(
+    //           padding: EdgeInsets.symmetric(horizontal: index == 1 ? 12 : 0),
+    //           child: AllExpansesItem(
+    //             itemModel: item,
+    //             isSelected: selectedIndex == index,
+    //           ),
+    //         ),
+    //       ),
+    //     );
+    //   }).toList(),
+    // );
   }
 
   void updateIndex(int index) {
